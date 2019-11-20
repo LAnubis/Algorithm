@@ -6,7 +6,12 @@ namespace Algorithm
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            DayOne d = new DayOne();
+            int[] nums = { 1, 2, 3, 1, 1, 2, 3 };
+            d.RemoveDuplicates(nums);
+
+            Console.WriteLine("End!");
+            Console.ReadKey();
         }
     }
 }

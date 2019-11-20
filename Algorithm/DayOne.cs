@@ -12,7 +12,7 @@ namespace Algorithm
             if (nums.Length > 0)
             {
                 int length = nums.Length;
-                Console.WriteLine("原始数组为：" + string.Join(",", nums) + "数组长度：" + length + "\n");
+                Console.WriteLine("original array:" + string.Join(",", nums) + "arraylength:" + length + "\n");
                 //排序
                 for (int i = 0; i < nums.Length - 1; i++)
                 {
@@ -27,7 +27,7 @@ namespace Algorithm
                         }
                     }
                 }
-                Console.WriteLine("排序后的数组为：" + string.Join(",", nums) + "数组长度：" + length + "\n");
+                Console.WriteLine("sort array:" + string.Join(",", nums) + "arraylength:" + length + "\n");
 
                 //获取非重复数组的长度
                 int m = 0;
@@ -38,14 +38,20 @@ namespace Algorithm
                         m++;
                         nums[m] = nums[i];
                     }
-                    Console.WriteLine("数组为：" + string.Join(",", nums) + " m值:" + m + " i值:" + i + " 数组长度：" + length + "\n");
+                    Console.WriteLine("array:" + string.Join(",", nums) + " m:" + m + " i:" + i + " arraylength:" + length + "\n");
                 }
-                length = m ++;
-                Console.WriteLine("最终数组为：" + string.Join(",", nums) + "数组长度：" + length + "\n");
+                length = m +1;
+
+                System.Array.Resize(ref nums, length);
+
+                Console.WriteLine("end array:" + string.Join(",", nums) + "arraylength:" + length + "\n");
                 return length;
             }
             return 0;
         }
+    
+
+      
     }
 
 }
